@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JasmineHu_Website</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+  <style>
+    /* Your existing CSS styles */
+    /* ... */
+
+    /* New styles for improved organization */
+    img {
+      border-radius: 50%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Montserrat", sans-serif;
+      background-color: #abb6c8;
+      color: #333;
+      line-height: 2.6;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 5rem;
+      margin-bottom: 0px;
+      text-align: center;
+      color: #e6dcdd;
+      background-color: #273a6d;
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 3rem;
+      color: #444;
+      margin-bottom: 15px;
+    }
+    
+    h3 {
+      font-family: Bradley Hand, cursive;
+      font-weight: 700;
+      font-size: 2rem;
+      color: #444;
+      margin: 0px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      margin-right: 20px;
+      text-align: center;
+      color: black;
+    }
+    
+    footer {
+      text-align: center;
+      background-color: #273a6d;
+      color: #fff;
+      padding: 20px;
+    }
+
+    footer a {
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+
+    nav ul {
+      list-style: none;
+      text-align: center;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 60px;
+      font-size: 1.5rem;
+    }
+
+    nav ul li a {
+      font-weight: 700;
+      text-decoration: none;
+      color: #666;
+      transition: color 0.3s ease;
+    }
+    
+    footer a:hover {
+      text-decoration: underline;
+      color: #abb6c8;
+    }
+
+    nav ul li a:hover {
+      color: #e6dcdd;
+    }
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .section-bg {
+      background-image: url("https://wallpapers.com/images/hd/neutral-colors-background-x13z3l3kkkwgo8i0.jpg");
+      background-size: 100% 100%;
+      background-position: center;
+      padding: 100px 20px;
+      color: #fff;
+    }
+
+    .section-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .image-placeholder {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      margin: 0 auto 40px;
+      background-color: #ddd;
+    }
+
+    .container {
+      text-align: center;
+      color: white;
+    }
+
+    .centered {
+      color: #e6dcdd;
+      font-family: Bradley Hand, cursive;
+      font-size: 2rem;
+    }
+    
+    .about-image {
+      height: 460px;
+      width: auto;
+      border-radius: 30px;
+      float: left;
+      margin-top: 30px;
+    }
+    
+    .about-content {
+      overflow: hidden;
+    }
+    
+    .about-text {
+      color: black;
+      margin-left: 400px;
+      background-color: white;
+      opacity: 0.7;
+      padding: 25px;
+    }
+    
+    .hobbies-text {
+      color: #444;
+      margin-bottom: 70px;
+      background-color: white;
+      opacity: 0.7;
+      border-radius: 15px 50px;
+    }
+    
+    .hobbies-images {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mosaic-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .item {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .item img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .text-box {
+      position: absolute;
+      bottom: 90px; /* Space for text */
+      left: 0;
+      width: 100%;
+      background-color: white;
+      opacity: 0.8;
+      padding: 10px;
+      text-align: center;
+      transition: transform 0.3s ease;
+      transform: translateY(100%);
+    }
+
+    .item:hover .text-box {
+      transform: translateY(0);
+    }
+    
+  </style>
+  </head>
+  <body>
+  <!-- Header Section -->
+  <header>
+    <h1>JASMINE HU'S WEBSITE</h1>
+    <nav>
+      <ul>
+        <li><a href="#about" onclick="scrollToSection('about')">About Me</a></li>
+        <li><a href="#hobbies" onclick="scrollToSection('hobbies')">Hobbies</a></li>
+        <li><a href="#projects" onclick="scrollToSection('projects')">Projects</a></li>
+        <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Image and Welcome Text -->
+    <div class="container">
+      <img src="IMG_0915.JPG" alt="Your Image" style="width: 100%; max-width: 1000px; height: auto; margin: auto; margin-bottom: 50px; display: block;">
+      <div class="centered">Hi there~ Welcome to my website!</div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+     <!-- About Me Section -->
+    <section class="section section-bg clearfix" id="about"> 
+      <div class="section-content"><h2>About Me</h2>
+        <div class="about-content">
+          <img src="IMG_0807.PNG" alt="about me image" class="about-image">
+          <p class="about-text">Hello! I'm Jasmine Hu, a 19-year-old student majoring in Global Business and Digital Arts at the University of Waterloo.</p>
+          <p class="about-text">My MBTI is ESTP (Entrepreneur Personality), meaning that I love finding exciting new things to explore and experience! </p>
+        </div></div>
+    </section>
+
+
+    <!-- Hobbies Section -->
+    <section class="section" id="hobbies">
+      <div class="section-content">
+        <h2 class="hobbies-text">Hobbies</h2>
+        <div class="hobbies-images">
+          <div class="mosaic-grid">
+            <div class="item item1">
+              <img src="IMG_0929.jpg" alt="Hobby 1">
+              <div class="text-box">
+                <!-- Add text related to Hobby 1 -->
+                <h3>Dance</h3>
+                <p>From a young age, dance has been an integral part of my life. It's more than movement; it's a gateway to friendships. I'm actively engaged in the UW dance community, where every step fosters new connections and experiences.</p>
+              </div>
+            </div>
+            <div class="item item2">
+              <img src="IMG_0925.jpg" alt="Hobby 2">
+              <div class="text-box">
+                <!-- Add text related to Hobby 2 -->
+                <h3>Music</h3>
+                <p>Music breathes life into my world! Listening and singing to RnB and pop songs fills my days. Moreover, I have been playing the clarinet for 7 years, and I recently taught myself how to play the guitar.</p>
+              </div>
+            </div>
+            <div class="item item3">
+              <img src="IMG_0927.jpg" alt="Hobby 3">
+              <div class="text-box">
+                <!-- Add text related to Hobby 3 -->
+                <h3>DIY</h3>
+                <p>Crafting and creating keep me energized. Whether constructing intricate Lego sets, experimenting with dessert recipes, or knitting cozy scarves, hands-on activities fuel my leisure hours, channeling creativity and joy.</p>
+              </div>
+            </div>
+            <div class="item item4">
+              <img src="IMG_0921.jpg" alt="Hobby 4">
+              <div class="text-box">
+                <!-- Add text related to Hobby 4 -->
+                <h3>Chinese Culture</h3>
+                <p>Embracing my Chinese-Canadian heritage, I actively participate in activities preserving and celebrating my culture. Classical Chinese Dancing and wearing the HanFu are avenues that connect me to my roots and identity.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- Projects Section -->
+    <section class="section section-bg" id="projects">
+      <div class="section-content">
+        <h2>Recent Projects</h2>
+        <p><b>Documentary: </b>Tuning Dreams</p>
+        <a href="https://youtu.be/GjJ1u0Cf0ic" target="_blank"><img src="Screen Shot 2023-12-10 at 3.16.13 AM.png" alt="Documentary" style="width:100%; max-width: 600px; height:auto; border-radius: 0%;"></a>
+        <p><b>Video Essay:</b> Knowledge Translation</p>
+        <a href="https://youtu.be/7-rYWoeyF3Y" target="_blank"><img src="Screen Shot 2023-12-10 at 3.37.38 AM.png" alt="Video Essay" style="width:100%; max-width:600px; height:auto; border-radius: 0%;"></a>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+      <div class="section-content">
+        <h2>Leave Me A Message</h2>
+        
+        <!-- New Form -->
+        <form id="myForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required><br><br>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required><br><br>
+
+          <label for="message">Message:</label><br>
+          <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+          <input type="submit" value="Submit">
+        </form>
+
+        <script>
+          document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Your logic to handle the form data here
+            // For now, let's just show a "thank you" message
+
+            // Get the form element
+            const form = document.getElementById('myForm');
+
+            // Create a thank you message element
+            const thankYouMessage = document.createElement('p');
+            thankYouMessage.textContent = 'Thank you for leaving a message!';
+
+            // Append the message after the form
+            form.insertAdjacentElement('afterend', thankYouMessage);
+
+            // Clear the form fields (optional)
+            form.reset();
+          });
+        </script>
+
+        
+      </div>
+    </section>
+    <!-- Add more sections with image placeholders based on your plan -->
+  </main>
+    
+    
+ 
+  
+  <footer>
+    <p style="color: white;">Email: <a href="#" onclick="openEmail()">j37hu@uwaterloo.ca</a></p>
+  </footer>
+  
+  <script>
+    function openEmail() {
+      window.open('mailto:j37hu@uwaterloo.ca');
+    }
+  </script>
+
+  <script>
+    function scrollToSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+
+</body>
+</html>
